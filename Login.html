@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mi Ciudad</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="myScript.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+  .encabezado {
+    background-image:url(Imperdibles-de-Rio-Negro.jpg) ;
+    background-size:cover;
+    background-position: center;
+  }
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav col-12">
+      <li class="nav-item">
+        <a class="nav-link" href="Index.html">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="SitiosInteres.html">Sitios de Interes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Eventos.html">Eventos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Comercios.html">Comercios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Asistencia.html">Servicios de asistencia</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" style="color: aliceblue;" href="Login.html">Iniciar Sesion</a>
+      </li> 
+    </ul>
+  </div>  
+</nav>
+
+<div class="jumbotron text-center encabezado text-white" style="margin-bottom:0" id="EncabezadoImg">
+  <h1>Bienvenidos a mi cuidad</h1>
+  <p>Descrubri las maravillas naturales y gastronomicas!</p> 
+</div>
+
+<div class="container" style="margin-top:30px;margin-bottom:30px; width: 50%;">
+    <div class="card">
+        <div class="card-header bg-primary" style="color: aliceblue;">Iniciar Sesion</div>
+        <div class="card-body">
+            <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="user">Usuario:</label>
+                  <input type="user" class="form-control" id="user" placeholder="Nombre de usuario" name="user">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">contraseña:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="contraseña" name="pswd">
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-success">Ingresar</button>
+              </form>
+        </div>
+        <div class="card-footer bg-dark" style="color: aliceblue; text-align: right;"><a href="#">Olvidaste tu contraseña?</a></div>
+    </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Contact Us</p>
+</div>
+
+</body>
+</html>
