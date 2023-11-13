@@ -5,9 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  <script src="jquery-3.7.1.js"></script>
   <script src="myScript.js"></script>
   <style>
   .fakeimg {
@@ -19,6 +26,13 @@
     background-image:url(Imperdibles-de-Rio-Negro.jpg) ;
     background-size:cover;
     background-position: center;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 3;
   }
   </style>
 </head>
@@ -60,26 +74,27 @@
 <div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-sm-4">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3>Some Links</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Dolar</th>
+            <th>Compra</th>
+            <th>Venta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Oficial</td>
+            <td id="dolarOficialCompra"></td>
+            <td id="dolarOficialVenta"></td>
+          </tr>
+          <tr>
+            <td>Blue</td>
+            <td id="dolarBlueCompra"></td>
+            <td id="dolarBlueVenta"></td>
+          </tr>
+        </tbody>
+      </table>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
@@ -97,6 +112,7 @@
     </div>
   </div>
 </div>
+<div id="map"></div>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
   <p>Contact Us</p>
